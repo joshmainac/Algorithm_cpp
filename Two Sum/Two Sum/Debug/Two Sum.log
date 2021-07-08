@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\IamJo\source\repos\C++algorithm\Two Sum\Two Sum\main.cpp(41,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\IamJo\source\repos\C++algorithm\Two Sum\Two Sum\main.cpp(43,25): warning C4018: '<': signed/unsigned mismatch
+  Two Sum.vcxproj -> C:\Users\IamJo\source\repos\C++algorithm\Two Sum\Debug\Two Sum.exe
