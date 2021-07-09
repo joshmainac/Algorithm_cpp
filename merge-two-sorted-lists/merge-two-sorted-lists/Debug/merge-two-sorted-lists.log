@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\Github\Algorithm_cpp\merge-two-sorted-lists\merge-two-sorted-lists\main.cpp(16,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+D:\Github\Algorithm_cpp\merge-two-sorted-lists\merge-two-sorted-lists\main.cpp(44): warning C4172: returning address of local variable or temporary: aaa
+  merge-two-sorted-lists.vcxproj -> D:\Github\Algorithm_cpp\merge-two-sorted-lists\Debug\merge-two-sorted-lists.exe
