@@ -49,27 +49,35 @@ void main()
 
 ListNode* mergeTwoLists(ListNode* l1, ListNode* l2)
 {
-    ListNode* temp = l1;
-    while (l1->next != nullptr)
+    ListNode* newhead = NULL;
+    ListNode* current = NULL;
+    ListNode* temp = NULL;
+    
+    if (l1->val < l2->val)
     {
+        temp = l1;
         l1 = l1->next;
     }
-    l1;
-    l1->next = l2;
-    temp;
-    auto temp2 = temp;
-
-    while (temp != nullptr)
+    if (l1->val > l2->val)
     {
-        while (temp2 != nullptr)
-        {
-            temp2 = temp->next;
-            if (temp > temp2)
-            {
+        temp = l2;
+        l2 = l2->next;
 
-            }
+    }
+
+
+    current = newhead;
+    if (newhead == NULL)
+    {
+        newhead = temp;
+    }
+    else
+    {
+        while (current->next != NULL)
+        {
+            current = current->next;
         }
-        temp = temp->next;
+        current->next = temp;
     }
 
 
