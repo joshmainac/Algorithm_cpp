@@ -31,13 +31,14 @@ void main()
     (&nodea)->next = &nodeb;
     ListNode nodec(77);
     (&nodeb)->next = &nodec;
-    ListNode noded(8);
+    ListNode noded(88);
     (&nodec)->next = &noded;
-    ListNode nodee(9);
+    ListNode nodee(99);
     (&noded)->next = &nodee;
     nodea;
 
-    mergeTwoLists(&node1, &nodea);
+    auto ans = mergeTwoLists(&node1, &nodea);
+    ans;
 
 
 
@@ -52,9 +53,46 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2)
     ListNode* newhead = NULL;
     ListNode* current = NULL;
     ListNode* temp = NULL;
-    for (int i = 0; i < 5; i++)
+
+    if ((l1 == NULL) && (l2 == NULL))
     {
-        if ((l1->val) <= (l2->val))
+        return newhead;
+    }
+    if ((l2 == NULL))
+    {
+        return l1;
+    }
+    if ((l1 == NULL))
+    {
+        return l2;
+    }
+
+    while(1)
+    {
+        if (l1 == NULL)
+        {
+            current = newhead;
+            while (current->next != NULL)
+            {
+                current = current->next;
+            }
+            current->next = l2;
+
+            ListNode aaa(6);
+            return newhead;
+        }
+        if (l2 == NULL)
+        {
+            current = newhead;
+            while (current->next != NULL)
+            {
+                current = current->next;
+            }
+            current->next = l1;
+            ListNode aaa(6);
+            return newhead;
+        }
+        else if ((l1->val) <= (l2->val))
         {
             temp = l1;
             l1 = l1->next;
@@ -84,7 +122,5 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2)
         }
 
     }
-    newhead;
-    ListNode aaa(6);
-    return newhead;
+
 }
