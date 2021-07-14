@@ -12,6 +12,7 @@ using namespace std;
   };
   ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
 
+
 void main()
 {
     //list A
@@ -39,7 +40,6 @@ void main()
 
     auto ans = mergeTwoLists(&node1, &nodea);
     ans;
-
 
 
 
@@ -124,3 +124,4 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2)
     }
 
 }
+
