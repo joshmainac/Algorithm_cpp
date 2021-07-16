@@ -62,6 +62,7 @@ ListNode* sortLists(ListNode* l1, int size)
             if (&(l1) >  &(current))
             {
                 prev->next = current ->next;
+                current->next = l1;
                 l1 = current;
 
 
