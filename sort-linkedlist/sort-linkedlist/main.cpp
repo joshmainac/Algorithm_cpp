@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 struct ListNode {
@@ -8,16 +9,16 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
-ListNode* sortLists(ListNode* l1, size);
+ListNode* sortLists(ListNode* l1, int size);
 
 
 void main()
 {
     //list A
-    ListNode node1(4);
-    ListNode node2(5);
+    ListNode node1(5);
+    ListNode node2(4);
     (&node1)->next = &node2;
-    ListNode node3(7);
+    ListNode node3(3);
     (&node2)->next = &node3;
     ListNode node4(8);
     (&node3)->next = &node4;
@@ -36,7 +37,7 @@ void main()
     (&noded)->next = &nodee;
     nodea;
 
-    //auto ans = mergeTwoLists(&node1, &nodea);
+    auto ans = sortLists(&node1,5);
     //ans;
 
 
@@ -55,24 +56,19 @@ ListNode* sortLists(ListNode* l1, int size)
 
     for (int i = 0; i < size; i++)
     {
+        cout << "i";
         prev = current;
+        if (i == 4)
+        {
+            //
+        }
         for (int j = i; j < size; j++)
         {
-            current = current->next;
-            if (&(l1) >  &(current))
-            {
-                prev->next = current ->next;
-                current->next = l1;
-                l1 = current;
-
-
-
-            }
-            
-
+            cout << "j";
 
         }
-        l1 = l1->next;
+
+        
 
 
     }
@@ -80,6 +76,6 @@ ListNode* sortLists(ListNode* l1, int size)
 
 
 
-
-
+    return(l1);
+   
 }
