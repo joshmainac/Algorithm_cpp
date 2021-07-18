@@ -53,21 +53,31 @@ ListNode* sortLists(ListNode* l1, int size)
     ListNode* newhead = NULL;
     ListNode* current = l1;
     ListNode* prev = l1;
+    ListNode* target = l1;
 
     for (int i = 0; i < size; i++)
     {
-        cout << "i";
+        cout << "\ni";
         prev = current;
         if (i == 4)
         {
             //
         }
-        for (int j = i; j < size; j++)
+        for (int j = i; j < size-1; j++)
         {
+            current = current->next;
             cout << "j";
 
-        }
+            if (target->val > current->val)
+            {
+                target = current;
+            }
+            
 
+        }
+        cout << target->val;
+        l1 = l1 -> next;
+        target = l1;
         
 
 
