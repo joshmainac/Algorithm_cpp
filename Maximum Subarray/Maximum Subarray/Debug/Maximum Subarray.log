@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\Github\Algorithm_cpp\Maximum Subarray\Maximum Subarray\main.cpp(8,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+D:\Github\Algorithm_cpp\Maximum Subarray\Maximum Subarray\main.cpp(37,20): warning C4018: '<': signed/unsigned mismatch
+  Maximum Subarray.vcxproj -> D:\Github\Algorithm_cpp\Maximum Subarray\Debug\Maximum Subarray.exe
