@@ -4,11 +4,12 @@ using namespace std;
 
 
 int maxProfit(vector<int>& prices);
+int maxProfit2(vector<int>& prices);
 
 int main()
 {
-	vector<int> myvector = { 8,1,6,2,65 };
-	maxProfit(myvector);
+	vector<int> myvector = { 99,1,98,2,9,7 };
+	maxProfit2(myvector);
 
 
 
@@ -41,3 +42,39 @@ int maxProfit(vector<int>& prices)
 
 
 }
+
+int maxProfit2(vector<int>& prices)
+{
+	int mysize = prices.size();
+	int maxval = prices[0];
+	int minval = prices[0];
+	int bestnum = 0;
+
+	for (int i = 0; i < mysize; i++)
+	{
+		if (prices[i] > maxval)
+		{
+			maxval = prices[i];
+			if (maxval - minval > bestnum)bestnum = (maxval - minval);
+		}
+		if (prices[i] < minval)
+		{
+			minval = prices[i];
+			maxval = prices[i];
+
+		}
+
+		
+
+
+
+	}
+
+
+	cout << bestnum;
+	return bestnum;
+
+
+
+}
+
