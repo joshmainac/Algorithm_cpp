@@ -1,5 +1,5 @@
 ﻿  main.cpp
-D:\Github\Algorithm_cpp\Single Number\Single Number\main.cpp(44,16): warning C4018: '<': signed/unsigned mismatch
-D:\Github\Algorithm_cpp\Single Number\Single Number\main.cpp(48,17): warning C4018: '<': signed/unsigned mismatch
-D:\Github\Algorithm_cpp\Single Number\Single Number\main.cpp(57,17): warning C4018: '<': signed/unsigned mismatch
+D:\Github\Algorithm_cpp\Single Number\Single Number\main.cpp(49,16): warning C4018: '<': signed/unsigned mismatch
+D:\Github\Algorithm_cpp\Single Number\Single Number\main.cpp(53,17): warning C4018: '<': signed/unsigned mismatch
+D:\Github\Algorithm_cpp\Single Number\Single Number\main.cpp(65,17): warning C4018: '<': signed/unsigned mismatch
   Single Number.vcxproj -> D:\Github\Algorithm_cpp\Single Number\Debug\Single Number.exe

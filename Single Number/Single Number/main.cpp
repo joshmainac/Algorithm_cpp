@@ -24,6 +24,8 @@ int main()
 	myvector.push_back(2);
 	myvector.push_back(2);
 	myvector.push_back(1);
+	//myvector.push_back(-1);
+	//myvector.push_back(3);
 	int ans = singleNumber(myvector);
 
 
@@ -42,6 +44,7 @@ int singleNumber(vector<int>& nums)
 	int ans = 0;
 	int i;
 	int j;
+	int n;
 
 	for (i = 0; i < nums.size(); i++)
 	{
@@ -55,18 +58,23 @@ int singleNumber(vector<int>& nums)
 			}
 		}
 		if (j != seen2.size())continue;
+		n = seen1.size();
 
-		for (j = 0; j < seen1.size(); j++)
+
+
+		for (j = 0; j < seen1.size(); ++j)
 		{
 			if (seen1[j] == nums[i])
 			{
-				seen1.erase(seen1.begin() + j, seen1.begin() + (j+1));
+				seen1.erase(seen1.begin() + j, seen1.begin() + (j + 1));
 				seen2.push_back(nums[i]);
-			
+				break;
+				
+
 			}
 
 		}
-		if (j != seen1.size())continue;
+		if (j != n)continue;
 		seen1.push_back(nums[i]);
 
 	}
@@ -78,4 +86,5 @@ int singleNumber(vector<int>& nums)
 
 
 	return seen1[0];
+
 }
