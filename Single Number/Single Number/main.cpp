@@ -8,7 +8,7 @@
 //
 //Input: nums = [2, 2, 1]
 //Output : 1
-
+//outpuy....................................
 
 //[1,3,1,-1,3]failed
 #include <iostream>
