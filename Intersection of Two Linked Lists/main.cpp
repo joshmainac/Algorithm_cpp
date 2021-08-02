@@ -12,6 +12,18 @@ class Solution {
 public:
     ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
 
+        ListNode *pos1 = headA;
+        ListNode *pos2 = headB;
+        while (1)
+        {
+            if()
+            pos1 = pos1->next;
+            pos2 = pos2->next;
+
+
+        }
+
+
     }
 };
 
