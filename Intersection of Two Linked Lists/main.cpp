@@ -16,7 +16,11 @@ public:
         ListNode *pos2 = headB;
         while (1)
         {
-            if(pos1 == )
+           
+            if (pos1 == pos2)
+            {
+                return pos1;
+            }
 
             if (pos1 != nullptr)
             {
@@ -27,7 +31,7 @@ public:
                 pos1 = headB;
             }
             
-            if (pos1 != nullptr)
+            if (pos2 != nullptr)
             {
                 pos2 = pos2->next;
             }
