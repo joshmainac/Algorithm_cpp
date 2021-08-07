@@ -32,6 +32,8 @@ int main()
 
 ListNode* reverseList(ListNode* head)
 {
+    if (head == nullptr || head->next == nullptr)return head;
+
     ListNode *pos1 = head;
     ListNode *pos2 = head;
     ListNode *pos3 = head;
@@ -39,34 +41,18 @@ ListNode* reverseList(ListNode* head)
 
     pos2 = pos2->next;
     pos3 = (pos3->next)->next;
+    pos1->next = nullptr;
 
     //
-    while (pos3->next != nullptr)
+    while (pos3 != nullptr)
     {
         pos2->next = pos1;
         pos1 = pos2;
         pos2 = pos3;
         pos3 = pos3->next;
     }
-    if (pos3->next == nullptr)pos3->next = pos2;
-    //5 4 5 4 5 4 problem
-    ListNode* current = pos3;
-    while (current != nullptr)
-    {
-        current = current->next;
-    }
-    
+    if (pos3 ==  nullptr)pos2->next = pos1;
 
-
-
-
-
-
-
-
-
-
-
-
-    return head;
+   
+    return pos2;
 }
