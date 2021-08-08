@@ -1,0 +1,2 @@
+D:\Github\Algorithm_cpp\Majority Element\Debug\Majority Element.exe
+D:\Github\Algorithm_cpp\Majority Element\Debug\Majority Element.pdb
