@@ -7,35 +7,35 @@ vector<int> countBits(int n);
 int main()
 {
 
-	countBits(183);
+	auto a = countBits(5);
 
 
 
 
-
+	a;
 	return 0;
 }
 
 vector<int> countBits(int n)
 {
 	vector<int> ans;
-	int i = 0;
-	int temp = n;
-	while (temp != 0)
+	for (int m = 0; m < n+1; m++)
 	{
-		if (temp % 2 != 0)
+		int i = 0;
+		int temp = m;
+		while (temp != 0)
 		{
-			i = i + 1;
-			temp = temp - 1;
+			if (temp % 2 != 0)
+			{
+				i = i + 1;
+				temp = temp - 1;
+			}
+			temp = temp / 2;
 		}
-		temp = temp / 2;
+		ans.push_back(i);
 
 
 	}
-	
-	i;
 	return ans;
-
-
 
 }
