@@ -15,7 +15,8 @@ int main()
 	myvector.push_back(4);
 	myvector.push_back(5);
 	//print_vector(myvector);
-	inlist(4, myvector);
+	//inlist(4, myvector);
+	inlist2();
 	//inlist2();
 	return 0;
 }
@@ -65,7 +66,31 @@ void inlist(int value, vector<int>& nums)
 
 void inlist2()
 {
+	vector<int> myvector;
+	myvector.push_back(1);
+	myvector.push_back(1);
+	myvector.push_back(2);
+	myvector.push_back(3);
+	myvector.push_back(4);
+	myvector.push_back(5);
+	vector<int> found;
 
+
+	for (int m : myvector)
+	{
+		int value = m;
+		for (int n : found)
+		{
+			if (n == value)break;
+
+
+		}
+		if (n == value)break;
+		found.push_back(value);
+		cout << "out" << endl;
+
+
+	}
 
 
 
