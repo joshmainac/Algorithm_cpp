@@ -1,10 +1,15 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 vector<int> findDisappearedNumbers(vector<int>& nums);
 void inlist(int value, vector<int>& nums);
 void print_vector(vector<int>& nums);
 void inlist2();
+vector<int> findDisappearedNumbers2(vector<int>& nums);
+
+void sort_vector();
+
 int main()
 {
 	vector<int> myvector;
@@ -16,8 +21,9 @@ int main()
 	myvector.push_back(5);
 	//print_vector(myvector);
 	//inlist(4, myvector);
-	inlist2();
 	//inlist2();
+	//inlist2();
+	findDisappearedNumbers2(myvector);
 	return 0;
 }
 
@@ -75,23 +81,49 @@ void inlist2()
 	myvector.push_back(5);
 	vector<int> found;
 
-
+	int in_out = 0;
 	for (int m : myvector)
 	{
-		int value = m;
 		for (int n : found)
 		{
-			if (n == value)break;
-
-
+			if (n == m)in_out = 1;
 		}
-		if (n == value)break;
-		found.push_back(value);
-		cout << "out" << endl;
-
+		if (in_out == 0)found.push_back(m);
+		in_out = 0;
 
 	}
 
 
 
 }
+
+void sort_vector()
+{
+	vector<int> myvector;
+	myvector.push_back(5);
+	myvector.push_back(1);
+	myvector.push_back(1);
+	myvector.push_back(2);
+	myvector.push_back(3);
+	myvector.push_back(4);
+	myvector.push_back(5);
+	sort(myvector.begin(), myvector.end());
+	return;
+
+
+
+}
+
+vector<int> findDisappearedNumbers2(vector<int>& nums) {
+	sort(nums.begin(), nums.end());
+	int i = 1;
+	for (int n : nums)
+	{
+		if (n == i)i++;
+
+
+	}
+	
+	return nums;
+}
+
