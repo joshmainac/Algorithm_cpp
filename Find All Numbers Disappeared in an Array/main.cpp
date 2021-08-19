@@ -115,15 +115,15 @@ void sort_vector()
 }
 
 vector<int> findDisappearedNumbers2(vector<int>& nums) {
+	//make only unique
+	vector<int> myvector;
 	sort(nums.begin(), nums.end());
-	int i = 1;
-	for (int n : nums)
+	for (int i = 0; i < nums.size(); i++)
 	{
-		if (n == i)i++;
 
 
 	}
-	
-	return nums;
+
+
 }
 
