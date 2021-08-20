@@ -3,13 +3,8 @@
 #include <algorithm>
 using namespace std;
 vector<int> findDisappearedNumbers(vector<int>& nums);
-void inlist(int value, vector<int>& nums);
-void print_vector(vector<int>& nums);
-void inlist2();
-vector<int> findDisappearedNumbers2(vector<int>& nums);
-
-void sort_vector();
-
+vector<int> findDisappearedNumbers2();
+using namespace std;
 int main()
 {
 	vector<int> myvector;
@@ -19,11 +14,7 @@ int main()
 	myvector.push_back(3);
 	myvector.push_back(4);
 	myvector.push_back(5);
-	//print_vector(myvector);
-	//inlist(4, myvector);
-	//inlist2();
-	//inlist2();
-	findDisappearedNumbers2(myvector);
+
 	return 0;
 }
 
@@ -39,91 +30,37 @@ vector<int> findDisappearedNumbers(vector<int>& nums){
 	return nums;
 }
 
-//push if you do not see similar number 
 
-void print_vector(vector<int>& nums)
+
+
+
+
+vector<int> findDisappearedNumbers2()
 {
-	for (int n : nums)// n is the value of the list, lopps num of the initial size of list;
+	vector<int> v;
+	v.push_back(5);
+	v.push_back(1);
+	v.push_back(1);
+	v.push_back(2);
+	v.push_back(3);
+	v.push_back(4);
+	v.push_back(5);
+	vector<int> vv;
+	for (int i = 1; i <v.size()+1; i++)
 	{
-		cout << n << endl;
-
+		vv.push_back(i);
 	}
-
-}
-
-void inlist(int value, vector<int>& nums)
-{
+	for (int j : v)
+	{
+		auto i = std::remove(vv.begin(), vv.end(), j);
+		vv.erase(i, vv.end());
+	}
+	return vv;
 	
-	for (int n : nums)
-	{
-		if (n == value)
-		{
-			cout << "in" << endl;
-			return;
-		}
 
 
-	}
-	cout << "out" << endl;
+
 
 
 
 }
-
-void inlist2()
-{
-	vector<int> myvector;
-	myvector.push_back(1);
-	myvector.push_back(1);
-	myvector.push_back(2);
-	myvector.push_back(3);
-	myvector.push_back(4);
-	myvector.push_back(5);
-	vector<int> found;
-
-	int in_out = 0;
-	for (int m : myvector)
-	{
-		for (int n : found)
-		{
-			if (n == m)in_out = 1;
-		}
-		if (in_out == 0)found.push_back(m);
-		in_out = 0;
-
-	}
-
-
-
-}
-
-void sort_vector()
-{
-	vector<int> myvector;
-	myvector.push_back(5);
-	myvector.push_back(1);
-	myvector.push_back(1);
-	myvector.push_back(2);
-	myvector.push_back(3);
-	myvector.push_back(4);
-	myvector.push_back(5);
-	sort(myvector.begin(), myvector.end());
-	return;
-
-
-
-}
-
-vector<int> findDisappearedNumbers2(vector<int>& nums) {
-	//make only unique
-	vector<int> myvector;
-	sort(nums.begin(), nums.end());
-	for (int i = 0; i < nums.size(); i++)
-	{
-
-
-	}
-
-
-}
-
