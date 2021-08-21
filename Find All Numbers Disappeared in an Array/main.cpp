@@ -8,23 +8,33 @@ using namespace std;
 int main()
 {
 	vector<int> myvector;
-	myvector.push_back(55);
+	myvector.push_back(1);
 	myvector.push_back(1);
 	myvector.push_back(2);
 	myvector.push_back(3);
 	myvector.push_back(4);
 	myvector.push_back(5);
-
+	findDisappearedNumbers(myvector);
 	return 0;
 }
 
 
-vector<int> findDisappearedNumbers(vector<int>& nums){
-	//1) check vector head and store the value
-	//1.1) print all values in vector num
-	//2)check if that value is in the ans list
-	//3)yes-> don't push || no-> push to ans list
-	//4) do this to all values in vector num
+vector<int> findDisappearedNumbers(vector<int>& nums)
+{
+	for (int i = 0; i < nums.size(); i++)
+	{
+		if (nums[i] > 0)
+		{
+			nums[i] *= -1;
+
+		}
+
+
+	}
+
+
+
+
 
 
 	return nums;
