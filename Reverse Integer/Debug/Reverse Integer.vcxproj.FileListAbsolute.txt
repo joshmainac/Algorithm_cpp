@@ -1,0 +1,2 @@
+D:\Github\Algorithm_cpp\Reverse Integer\Debug\Reverse Integer.exe
+D:\Github\Algorithm_cpp\Reverse Integer\Debug\Reverse Integer.pdb
