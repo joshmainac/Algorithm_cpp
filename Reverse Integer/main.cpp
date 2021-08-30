@@ -3,12 +3,18 @@
 #include <string> 
 using namespace std;
 int reverse(int x);
+int reverse_2(int x);
 //Input: x = 123
 //Output : 321
 int main()
 {
-
-	cout << reverse(-123) << endl;
+	//Input
+	//	1534236469
+	//	Output
+	//	1056389759
+	//	Expected
+	//	0
+	cout << reverse_2(1534236469) << endl;
 
 
 
@@ -49,9 +55,35 @@ int reverse(int x) {
 	return 1;
 }
 
-int reverse_2(int x, int size) {
-	//make x to string
+int reverse_2(int x) 
+{
+	int flag = 0;
+	if (x < 0)
+	{
+		flag = 1;
+	}
 
 
-	return 0;
+	int num = abs(x);
+	long int ans = 0;
+	int first_digit = 0;
+	while (num > 0)
+	{
+		first_digit = num % 10;
+		num = num / 10;
+		ans = (ans * 10);
+		ans = ans +first_digit;
+		ans = ans + 0;
+		
+	}
+	if (flag == 0)
+	{
+		return ans;
+	}
+	else
+	{
+		return ans * (-1);
+	}
+
+
 }
