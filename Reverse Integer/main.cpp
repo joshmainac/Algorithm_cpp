@@ -76,13 +76,20 @@ int reverse_2(int x)
 		ans = ans + 0;
 		
 	}
-	if (flag == 0)
+
+
+	if (flag == 1)
 	{
-		return ans;
+		ans = ans * (-1);
+	}
+
+	if (ans > INT_MAX || ans < INT_MIN)
+	{
+		return 0;
 	}
 	else
 	{
-		return ans * (-1);
+		return ans;
 	}
 
 
