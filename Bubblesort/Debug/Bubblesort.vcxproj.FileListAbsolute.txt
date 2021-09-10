@@ -1,0 +1,2 @@
+D:\Github\Algorithm_cpp\Bubblesort\Debug\Bubblesort.exe
+D:\Github\Algorithm_cpp\Bubblesort\Debug\Bubblesort.pdb
