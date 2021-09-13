@@ -36,15 +36,68 @@ void printArray(int arr[], int size)
     cout << endl;
 }
 
+
+
+void loop1()
+{
+    //double for loop. loopA & loopB.
+    //loop A is n-1 which means count depends on size.
+    //loop B is n-1-i which means it  count depends on size at ferst inplementation.
+    //but the count goes down every implementation
+    int size = 10; //size of list 
+
+
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size -i; j++)
+        {
+            //do
+        }
+
+    }
+
+
+
+    //used for buble sort
+
+
+
+
+
+}
+
+void loop2()
+{
+
+    // loop A implement loop b size times
+    // loop b goes though list
+
+    int size = 7; //size of list 
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+
+        }
+
+    }
+
+
+
+
+
+}
+
 // Driver code 
 int main()
 {
-    int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
-    int n = sizeof(arr) / sizeof(arr[0]);
+    //int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+    //int n = sizeof(arr) / sizeof(arr[0]);
     //bubbleSort(arr, n);
     //cout << "Sorted array: \n";
     //printArray(arr, n);
     //return 0;
-    printall(arr, n);
+    //printall(arr, n);
+    loop2();
     return 0;
 }
